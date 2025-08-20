@@ -19,3 +19,28 @@ insert into peliculas (title, main_character, release_year, genre, grossed) valu
 ('Pulp Fiction', 'Uma Thruman', 1994, 'Drama', 213928762),
 ('Con Faldas y a lo Loco', 'Marilyn Monroe', 1959, 'Comedy', 208786),
 ('El Exorcista', 'Linda Blair', 1973, 'Horror', 430872776);
+
+
+select title, release_year from peliculas;
+
+select * from peliculas 
+where release_year > 2000 
+order by release_year desc;
+
+
+select * from peliculas
+order by title;
+
+select genre, count(*) as title
+from peliculas
+group by genre
+order by title desc;
+
+select title, grossed from peliculas
+where grossed > 800000000
+order by grossed asc;
+
+
+
+
+
