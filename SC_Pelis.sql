@@ -31,15 +31,22 @@ order by release_year desc;
 select * from peliculas
 order by title;
 
-select genre, count(*) as title
+select genre, count(title) as pelis_por_genre
 from peliculas
-group by genre
-order by title desc;
+group by genre;
 
 select title, grossed from peliculas
-where grossed > 800000000
+where grossed < 800000000
 order by grossed asc;
 
+select count(*) as total_pelis
+from peliculas;
+
+select sum(grossed) as total_gross
+from peliculas;
+
+select avg(grossed) as media_gross
+from peliculas;
 
 
 
